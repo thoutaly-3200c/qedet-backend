@@ -1,0 +1,2 @@
+package q.qedet.warehouse.repository; import org.springframework.data.jpa.repository.JpaRepository; import q.qedet.warehouse.entity.ReceivingRequestItem; import java.util.*;
+public interface ReceivingRequestItemRepository extends JpaRepository<ReceivingRequestItem,UUID>{ Optional<ReceivingRequestItem> findByReceivingRequestIdAndPurchaseOrderItemId(UUID requestId,UUID itemId); Optional<ReceivingRequestItem> findByIdAndReceivingRequestOrganizationId(UUID id,UUID org); List<ReceivingRequestItem> findAllByReceivingRequestId(UUID requestId); }

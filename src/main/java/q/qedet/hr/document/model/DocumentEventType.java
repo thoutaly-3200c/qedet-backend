@@ -1,0 +1,5 @@
+package q.qedet.hr.document.model;
+public enum DocumentEventType {
+    DOCUMENT_UPLOADED, DOCUMENT_VERIFIED, DOCUMENT_REJECTED, DOCUMENT_EXPIRED,
+    DOCUMENT_EXPIRING, DOCUMENT_ARCHIVED
+}

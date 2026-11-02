@@ -1,0 +1,5 @@
+package q.qedet.hr.request.model;
+public enum HrRequestEventType {
+    REQUEST_CREATED, REQUEST_SUBMITTED, REQUEST_APPROVED, REQUEST_REJECTED,
+    REQUEST_CANCELLED, REQUEST_EXECUTED
+}

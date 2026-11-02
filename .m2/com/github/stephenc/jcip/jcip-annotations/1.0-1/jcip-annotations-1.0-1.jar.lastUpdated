@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Oct 29 02:39:58 EEST 2026
+@default-shibboleth-repo-https\://build.shibboleth.net/nexus/content/repositories/releases/.lastUpdated=1793230798002
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1793230797803
+@default-maven_central-https\://repo.maven.apache.org/maven2/.lastUpdated=1793230798035
+https\://build.shibboleth.net/nexus/content/repositories/releases/.error=Could not transfer artifact com.github.stephenc.jcip\:jcip-annotations\:jar\:1.0-1 from/to shibboleth-repo (https\://build.shibboleth.net/nexus/content/repositories/releases/)\: Permission denied\: getsockopt
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.github.stephenc.jcip\:jcip-annotations\:jar\:1.0-1 from/to maven_central (https\://repo.maven.apache.org/maven2/)\: Permission denied\: getsockopt

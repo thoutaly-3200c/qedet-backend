@@ -1,0 +1,35 @@
+CREATE TABLE warehouse_returns (
+    id BINARY(16) NOT NULL PRIMARY KEY,
+    created_at DATETIME(6) NOT NULL,
+    updated_at DATETIME(6) NOT NULL,
+    organization_id BINARY(16) NOT NULL,
+    reference VARCHAR(64) NOT NULL,
+    type VARCHAR(24) NOT NULL,
+    status VARCHAR(32) NOT NULL,
+    reason VARCHAR(2000) NOT NULL,
+    sales_order_reference VARCHAR(160),
+    receipt_reference VARCHAR(160),
+    receiving_operation_id BINARY(16),
+    financial_request_id BINARY(16),
+    CONSTRAINT fk_warehouse_return_organization FOREIGN KEY (organization_id) REFERENCES organizations(id),
+    INDEX idx_warehouse_return_org_type_status (organization_id, type, status)
+);
+CREATE TABLE warehouse_return_items (
+    id BINARY(16) NOT NULL PRIMARY KEY,
+    created_at DATETIME(6) NOT NULL,
+    updated_at DATETIME(6) NOT NULL,
+    warehouse_return_id BINARY(16) NOT NULL,
+    product_id BINARY(16) NOT NULL,
+    qr_reference VARCHAR(80),
+    requested_quantity DECIMAL(19,4) NOT NULL,
+    received_quantity DECIMAL(19,4) NOT NULL DEFAULT 0,
+    returned_quantity DECIMAL(19,4) NOT NULL DEFAULT 0,
+    inspection_quantity DECIMAL(19,4) NOT NULL DEFAULT 0,
+    accepted_quantity DECIMAL(19,4) NOT NULL DEFAULT 0,
+    status VARCHAR(32) NOT NULL,
+    inspection_location_id BINARY(16),
+    condition_code VARCHAR(80),
+    handling_notes VARCHAR(2000),
+    CONSTRAINT fk_warehouse_return_item_return FOREIGN KEY (warehouse_return_id) REFERENCES warehouse_returns(id),
+    INDEX idx_warehouse_return_item_return (warehouse_return_id)
+);

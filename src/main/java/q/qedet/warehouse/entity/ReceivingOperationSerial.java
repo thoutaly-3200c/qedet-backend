@@ -1,0 +1,3 @@
+package q.qedet.warehouse.entity;
+import jakarta.persistence.*; import lombok.*; import q.qedet.common.model.TimestampedEntity; import q.qedet.product.entity.Product;
+@Entity @Table(name="receiving_operation_serials") @Getter @Setter @NoArgsConstructor public class ReceivingOperationSerial extends TimestampedEntity { @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="receiving_operation_item_id") private ReceivingOperationItem receivingOperationItem; @ManyToOne(fetch=FetchType.LAZY) @JoinColumn(name="product_id") private Product product; @Column(nullable=false) private String serialNumber; private String supplierQrIdentifier; private boolean accepted; }

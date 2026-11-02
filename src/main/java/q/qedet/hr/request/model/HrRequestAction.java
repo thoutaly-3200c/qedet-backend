@@ -1,0 +1,5 @@
+package q.qedet.hr.request.model;
+public enum HrRequestAction {
+    HR_REQUEST_CREATE, HR_REQUEST_VIEW, HR_REQUEST_UPDATE, HR_REQUEST_CANCEL,
+    HR_REQUEST_APPROVE, HR_REQUEST_REJECT, HR_REQUEST_EXECUTE
+}

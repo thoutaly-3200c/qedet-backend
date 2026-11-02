@@ -1,0 +1,2 @@
+package q.qedet.warehouse.repository; import org.springframework.data.jpa.repository.JpaRepository; import q.qedet.warehouse.entity.BinLocation; import java.util.*;
+public interface BinLocationRepository extends JpaRepository<BinLocation,UUID>{ List<BinLocation> findAllByOrganizationIdAndZoneSiteIdOrderByCodeAsc(UUID org,UUID siteId); List<BinLocation> findAllByOrganizationIdAndZoneIdOrderByCodeAsc(UUID org,UUID zone); Optional<BinLocation> findByIdAndOrganizationId(UUID id,UUID org); boolean existsByZoneIdAndCodeIgnoreCase(UUID zone,String code); }

@@ -1,0 +1,10 @@
+package q.qedet.common.model;
+
+public enum PlanQuota {
+    MAX_ACTIVE_EMPLOYEES,
+    MAX_PURCHASE_DOCUMENTS_PER_MONTH,
+    MAX_WAREHOUSES,
+    MAX_QR_CODES_PER_MONTH,
+    MAX_BRANCHES,
+    MAX_ACTIVE_INTEGRATIONS
+}

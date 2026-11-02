@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Oct 29 02:39:57 EEST 2026
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1793230797742
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.springframework\:spring-aop\:jar\:7.0.8 from/to central (https\://repo.maven.apache.org/maven2)\: Permission denied\: getsockopt
